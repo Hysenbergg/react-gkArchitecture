@@ -46,12 +46,11 @@ export default function Slider() {
     <main ref={ref} id="home">
       <Swiper
         // install Swiper modules
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        modules={[Navigation, Scrollbar, A11y]}
         spaceBetween={0}
         slidesPerView={1}
         navigation
         loop={true}
-        pagination={{ clickable: true }}
         className="h-screen"
       >
         {sliderElements.map((item) => (
