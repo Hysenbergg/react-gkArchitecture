@@ -55,8 +55,8 @@ const Projects = () => {
   const {ref} = useSectionInView('Projects', 0.5);
 
   return (
-    <div ref={ref} id="projects" className="bg-[#252531] py-[150px] text-center">
-      <h1 className="text-4xl font-bold mb-10 text-white">
+    <div ref={ref} id="projects" className="bg-[#252531] py-[70px] lg:py-[150px] text-center">
+      <h1 className="text-2xl lg:text-4xl font-bold mb-10 text-white">
         Projeler
       </h1>
       <Swiper
@@ -68,15 +68,15 @@ const Projects = () => {
         }}
         loop={true}
         modules={[Navigation]}
-        className="h-[500px]"
+        className="h-[200px] sm:h-[250px] md:h-[300px] lg:h-[500px]"
       >
         {projects.map((item, index) => (
-          <SwiperSlide key={index } className="relative">
-            <div className="flex flex-col">
-              <Image src={item.project_image} className="bg-cover" />
-              <div className="absolute w-full h-24 text-white bottom-0 right-0 left-0 text-center bg-black opacity-70 flex flex-col justify-center">
-                <h6 className="text-[24px] opacity-100">{item.title}</h6>
-                <h4 className="text-[18px] opacity-100">{item.describe}</h4>
+          <SwiperSlide key={index } className="relative h-full">
+            <div className="flex flex-col h-full">
+              <Image src={item.project_image} className="bg-cover h-full " />
+              <div className="absolute w-full h-12 lg:h-24 text-white bottom-0 right-0 left-0 text-center bg-black opacity-70 flex flex-col justify-center">
+                <h6 className="text-[12px] lg:text-[24px] opacity-100">{item.title}</h6>
+                <h4 className="text-[9px] lg:text-[18px] opacity-100">{item.describe}</h4>
               </div>
             </div>
           </SwiperSlide>

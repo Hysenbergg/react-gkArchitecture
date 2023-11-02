@@ -8,10 +8,10 @@ import { BiLogoFacebook, BiLogoTwitter } from "react-icons/bi";
 //bg-[#f8f4f3]
 const Footer = () => {
   return (
-    <footer className="bg-[#252531] text-white py-6 px-[50px]">
-      <div className="flex justify-between items-center container mx-auto">
+    <footer className="bg-[#252531] text-white py-6 px-[10px] sm:px-[50px]">
+      <div className="flex flex-col sm:flex-row sm:justify-between items-center container mx-auto">
         {/* Sol Tarafta Logo */}
-        <div className="w-1/2 flex justify-center">
+        <div className="w-full sm:w-1/2 md:w-2/3 flex justify-center mt-5 mb-5 sm:mt-0 sm:mb-0">
           <Image src={borderFooterLogo} className="w-2/3" />
         </div>
         {/* Sağ Tarafta Sosyal Medya ve Bilgiler */}
