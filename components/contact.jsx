@@ -2,13 +2,28 @@
 
 import React from "react";
 import { useSectionInView } from "@/lib/hooks";
-
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const {ref} = useSectionInView('Contact', 0.5);
 
   return (
-    <section ref={ref} id="contact" className="flex flex-col bg-[#f8f4f3] w-full text-center py-[50px] lg:py-[80px]">
+    <motion.section 
+      ref={ref} 
+      id="contact" 
+      initial={{
+        opacity: 0,
+      }}
+      whileInView={{
+        opacity: 1,
+      }}
+      transition={{
+        duration: 1,
+      }}
+      viewport={{
+        once: true,
+      }}
+      className="flex flex-col bg-[#f8f4f3] w-full text-center py-[50px] lg:py-[80px]">
       <h2 className="text-[42px] my-[30px]">Contact Us</h2>
       <div className="flex flex-col lg:flex-row justify-center items-center lg:justify-around px-[50px]">
         <form className="mt-5 lg:mt-10 flex flex-col w-[300px] md:w-[500px] mb-10 lg:mb-0">
@@ -40,7 +55,7 @@ const Contact = () => {
           ></iframe>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
